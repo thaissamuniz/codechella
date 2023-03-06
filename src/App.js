@@ -1,7 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import Banner from './components/Banner';
-import DateStripe from './components/DateStripe';
+import MainContent from './components/MainContent';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
-      <DateStripe />
+      <MainContent />
+      <Footer />
     </div>
   );
 }

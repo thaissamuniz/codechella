@@ -1,8 +1,8 @@
 import './style.css'
 
-const TextRaleway = ({ font, textWidth, text }) => {
+const TextRaleway = ({ font, textSize, text }) => {
     return (
-        <h2 className="text" style={{ fontFamily: font, width: textWidth }}>{text}</h2>
+        <h2 className="text" style={{ fontFamily: font, fontSize: textSize }}>{text}</h2>
     )
 }
 
