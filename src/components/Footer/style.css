@@ -1,3 +1,42 @@
 footer {
     background-color: #4650BD;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+li {
+    list-style: none;
+}
+
+.social--icon {
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.wpp {
+    background-image: url('../../img/Ícones\ redes\ socias-18.svg');
+}
+
+.twitch {
+    background-image: url('../../img/Ícones\ redes\ socias-19.svg');
+}
+
+.insta {
+    background-image: url('../../img/Ícones\ redes\ socias-16.svg');
+}
+
+.twitter {
+    background-image: url('../../img/Ícones\ redes\ socias-17.svg');
 }

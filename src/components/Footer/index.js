@@ -32,11 +32,21 @@ const Footer = () => {
         <footer>
             <Logo />
             <TextBox text={'Acesse nossas redes:'} />
-            <ul>
-                {
-                    socialMedias.map(item => <SocialMedia key={item.iconClass} imge={item.icone} socialMediaIcon={item.iconClass} link={item.url} />)
-                }
+            <ul className='social'>
+                <li>
+                    <a href='#' className='wpp social--icon'></a>
+                </li>
+                <li>
+                    <a href='#' className='twitch social--icon'></a>
+                </li>
+                <li>
+                    <a href='#' className='insta social--icon'></a>
+                </li>
+                <li>
+                    <a href='#' className='twitter social--icon'></a>
+                </li>
             </ul>
+            <TextBox text={'Desenvolvido por Thaissa.'} />
         </footer>
     )
 }
