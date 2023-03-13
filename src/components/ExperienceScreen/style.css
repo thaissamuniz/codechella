@@ -1,0 +1,13 @@
+.experienceContent {
+    background: linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
+   
+}
+
+.eCont{
+    box-sizing: border-box;
+    padding: 0 24px;
+}
+
+.bn {
+    margin-bottom: 32px;
+}

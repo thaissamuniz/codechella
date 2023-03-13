@@ -1,8 +1,10 @@
 import './style.css'
 
-const Banner = () => {
+const Banner = ({bannerImage}) => {
     return (
-        <div className="banner"></div>
+        <div className='banner'>
+            <img src={bannerImage} alt='' />
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
 import './style.css'
 import Text from '../Text'
 
-const DateStripe = () => {
+const DateStripe = ({textContent}) => {
     return (
         <div className='date__stripe'>
-            <Text font={"'Calistoga', cursive"} textWidth={'32px'} text={'SÁBADO <11/03>'}/>
+            <Text font={"'Calistoga', cursive"} textWidth={'32px'} text={textContent}/>
         </div>
     )
 }

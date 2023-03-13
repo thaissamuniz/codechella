@@ -1,5 +1,6 @@
 .banner {
-    background-image: url('../../img/Banner\ -\ Homepage.svg');
+    /* background-image: url('../../img/Banner\ -\ Homepage.svg');
     height: 270px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    height: 270px;
 }

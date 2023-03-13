@@ -1,8 +1,6 @@
-import hpimage from '../../img/Homepage1.png'
-
-const RoundedImg = () => {
+const RoundedImg = ({roundedImg}) => {
     return (
-        <img src={hpimage} alt='bandas'/>
+        <img src={roundedImg} alt='bandas'/>
     )
 }
 
