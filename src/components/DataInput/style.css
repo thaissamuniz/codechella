@@ -1,0 +1,23 @@
+.data__input {
+    display: block;
+    width: 312px;
+    height: 48px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.data__input--d {
+    margin-bottom: 32px;
+}
+
+.data__input--lb {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    line-height: 38px;
+    margin-bottom: 8px;
+}

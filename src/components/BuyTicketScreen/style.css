@@ -1,0 +1,29 @@
+.buy__ticket{
+    background: linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
+}
+
+.buy__ticket--content {
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.buy__ticket--slc {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    line-height: 38px;
+}
+
+.buy__ticket--opt {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #444444;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 312px;
+    height: 48px;
+    margin-bottom: 32px;
+}
