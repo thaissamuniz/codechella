@@ -1,3 +1,7 @@
 .date__stripe {
     background-color: #008364;
+    height: 74px;
+    text-align: center;
+    padding: 4px;
+    box-sizing: border-box;
 }

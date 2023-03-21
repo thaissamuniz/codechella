@@ -1,0 +1,15 @@
+.ticket__screen {
+    background: linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
+   
+}
+
+.ticket__screen--content {
+    padding: 24px;
+    box-sizing: border-box;
+    
+}
+
+.ticket__screen--txt {
+    margin-top: 64px;
+    margin-bottom: 32px;
+}

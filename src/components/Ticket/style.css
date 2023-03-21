@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+.ticket {
+    background: linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 32px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+.ticket__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.ticket__qr {
+    margin-bottom: 32px;
+}
+
+.ticket__name {
+    font-size: 32px;
+    font-weight: 700px;
+    margin-bottom: 16px;
+}

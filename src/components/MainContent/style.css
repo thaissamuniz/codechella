@@ -3,5 +3,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* padding: 32px 23px; */
+}
+.main__info {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.main__content--box {
     padding: 32px 23px;
+}
+
+.main__btn {
+    margin-top: 24px;
 }
