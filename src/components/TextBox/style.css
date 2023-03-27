@@ -7,3 +7,10 @@
     text-align: center;
     margin: 0;
 }
+
+@media screen and (min-width: 768px) {
+    .text__box--p {
+        padding: 0 61px;
+        box-sizing: border-box;
+    }
+}
