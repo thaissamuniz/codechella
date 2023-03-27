@@ -7,14 +7,15 @@ import Footer from './components/Footer';
 
 // import ImageDn from './components/ImageDn';
 // import bannerImg from './img/Banner - Homepage.svg';
-import ExperienceScreen from './components/ExperienceScreen';
+// import ExperienceScreen from './components/ExperienceScreen';
+import SectorMap from './components/SectorMap';
 
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ExperienceScreen />
+      <SectorMap />
       <Footer />
     </div>
   );

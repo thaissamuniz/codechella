@@ -9,12 +9,16 @@ import sectorMapTwo from '../../img/Mapa de setores3.png';
 import sectorMapThree from '../../img/Mapa de setores4.png';
 import Text from '../Text';
 
+import sectorMapOneTd from '../../img/sector-td1.png';
+import sectorMapTwoTd from '../../img/sector-td2.png';
+import sectorMapThreeTd from '../../img/sector-td3.png';
+
 
 const SectorMap = () => {
     return (
         <section className='sector__map'>
             <Banner bannerImage={mapBanner} />
-            <img src={mapImage} alt='' />
+            <img className='map' src={mapImage} alt='' />
             <div className='sector__map--content'>
                 <div className='sector__map--subtitle'>
                     <h3>Legenda:</h3>
@@ -25,10 +29,10 @@ const SectorMap = () => {
                     <MapSubtitle sec={'Rampas'} bgColor={'#0E7DF1'} />
                 </div>
                 <div>
-                    <Text font={"'Raleway', sans-serif"} textSize={'32px'} text={'Mais detalhes sobre os setores: '}/>
-                    <InfoCard cardImg={sectorMapOne} cardTitle={'Pista'} cardText={'Pista convencional, atendida pelos bares e banheiros das laterais do estádio. Espaço amplo, com local para sentar e descansar. Separada da pista premium por uma grade.'} />
-                    <InfoCard cardImg={sectorMapTwo} cardTitle={'Pista Premium'} cardText={'Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área.'} />
-                    <InfoCard cardImg={sectorMapThree} cardTitle={'Cadeiras'} cardText={'Opção de cadeiras térreas ou elevadas. Acesso próximo a banheiros e bares, visão um pouco elevada em relação às pistas.'} />
+                    <Text font={"'Raleway', sans-serif"} textSize={'32px'} text={'Mais detalhes sobre os setores: '} />
+                    <InfoCard cardImgMb={sectorMapOne} cardImgTdk={sectorMapTwoTd} cardTitle={'Pista'} cardText={'Pista convencional, atendida pelos bares e banheiros das laterais do estádio. Espaço amplo, com local para sentar e descansar. Separada da pista premium por uma grade.'} />
+                    <InfoCard cardImgMb={sectorMapTwo} cardImgTdk={sectorMapThreeTd} cardTitle={'Pista Premium'} cardText={'Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área.'} />
+                    <InfoCard cardImgMb={sectorMapThree} cardImgTdk={sectorMapOneTd} cardTitle={'Cadeiras'} cardText={'Opção de cadeiras térreas ou elevadas. Acesso próximo a banheiros e bares, visão um pouco elevada em relação às pistas.'} />
                 </div>
             </div>
         </section>
