@@ -18,3 +18,15 @@ align-items: center;
 .main__btn {
     margin-top: 24px;
 }
+
+@media screen and (min-width: 768px) {
+    .main__content--box {
+        padding: 32px 35px
+    }
+
+    .main__btn {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+}
+

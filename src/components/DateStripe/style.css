@@ -5,3 +5,11 @@
     padding: 4px;
     box-sizing: border-box;
 }
+
+@media screen and (min-width: 768px) {
+   .date__stripe {
+    width: 417px;
+    height: 94px;
+    margin: 0 auto;
+   }
+}

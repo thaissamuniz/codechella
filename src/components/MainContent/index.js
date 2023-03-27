@@ -22,10 +22,7 @@ const MainContent = () => {
                 x === 360 &&
                 < Banner bannerImage={bnImage} />
             }
-            {
-                x === 768 &&
-                < Banner bannerImage={bnImageTablet} />
-            }
+
             {
                 x >= 1200 &&
                 < Banner bannerImage={bnImageDesk} />
@@ -50,7 +47,14 @@ const MainContent = () => {
                         <MainButton textContent={'Comprar Ingresso!'} />
                     </div>
                 </div>
-                <Text font={'"Calistoga", serif'} textSize={'48px'} text={'/Line-Up/'} />
+                {
+                    x === 360 &&
+                    <Text font={'"Calistoga", serif'} textSize={'48px'} text={'/Line-Up/'} />
+                }
+                {
+                    x === 768 &&
+                    <Text font={'"Calistoga", serif'} textSize={'64px'} text={'/Line-Up/'} />
+                }
                 <DateStripe textContent={'SÁBADO <11/03>'} />
                 <AttractionList />
                 <DateStripe textContent={'DOMINGO <12/03>'} />

@@ -40,3 +40,17 @@ li {
 .twitter {
     background-image: url('../../img/Ícones\ redes\ socias-17.svg');
 }
+
+@media screen and (min-width: 768px) {
+    .footer__media {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        margin-top: 10px;
+    }
+
+    .social {
+        margin: 0;
+        margin-left: 8px;
+    }
+}

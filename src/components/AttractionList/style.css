@@ -1,0 +1,11 @@
+@media screen and (min-width: 768px) {
+    .attraction-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .attraction-list li:nth-child(2n+1){
+        margin-right: 32px;
+    }
+}
