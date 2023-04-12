@@ -19,4 +19,10 @@
     .ticket__screen--content {
         padding: 0 58px;
     }
+}
+
+@media screen and (min-width: 1440px) {
+    .ticket__screen--content {
+        padding: 0 324px;
+    }
 } 

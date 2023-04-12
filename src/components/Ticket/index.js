@@ -9,15 +9,18 @@ const Ticket = () => {
                 <img src={ticketLogo} alt='' />
                 <img src={ticketLogo2} alt='' />
             </div>
-            <div className='ticket__qr'>
-                <img src={qrCode} alt='' />
-            </div>
-            <div>
-                <h5 className='ticket__name'>Nome</h5>
-                <p>Tipo de Ingresso</p>
-                <p>setor</p>
-                <p>data</p>
-                <p>local</p>
+            <div className='ticket__content'>
+
+                <div className='ticket__qr'>
+                    <img src={qrCode} alt='' />
+                </div>
+                <div>
+                    <h5 className='ticket__name ticket__info'>Nome</h5>
+                    <p className='ticket__info'>Tipo de Ingresso</p>
+                    <p className='ticket__info'>setor</p>
+                    <p className='ticket__info'>data</p>
+                    <p className='ticket__info'>local</p>
+                </div>
             </div>
         </section>
     )

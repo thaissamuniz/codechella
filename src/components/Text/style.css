@@ -8,3 +8,9 @@
         padding: 0 90px;
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .text {
+        padding: 0;
+    }
+}

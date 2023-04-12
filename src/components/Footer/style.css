@@ -54,3 +54,17 @@ li {
         margin-left: 8px;
     }
 }
+
+@media screen and (min-width: 1440px) {
+   footer {
+    flex-direction: row;
+    padding: 29px 120px;
+    justify-content: space-between;
+   }
+
+   .footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+}
