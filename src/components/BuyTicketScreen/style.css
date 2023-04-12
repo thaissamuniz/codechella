@@ -33,4 +33,10 @@
     .buy__ticket--opt{
         width: 100%;
     }
-} 
+}
+
+@media screen and (min-width: 1440px) {
+    .buy__ticket--content {
+        padding: 0 322px;
+    }
+}

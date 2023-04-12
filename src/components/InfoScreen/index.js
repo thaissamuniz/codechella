@@ -1,13 +1,14 @@
 import './style.css';
 import Banner from '../Banner';
 import bnImage from '../../img/Banner - Infos gerais.png';
+import bnImageDesk from '../../img/BannerInfoDesk.png';
 import Text from '../Text';
 import InfoAccordion from '../InfoAccordion';
 
 const InfoScreen = () => {
     return (
         <section className='info__screen'>
-            <Banner bannerImage={bnImage} />
+            <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk}/>
             <div className='info'>
                 <Text font={'Calistoga'} textSize={'32px'} text={'Perguntas Frequentes:'} />
                 <div>
