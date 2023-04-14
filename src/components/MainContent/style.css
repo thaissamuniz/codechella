@@ -6,9 +6,9 @@
     /* padding: 32px 23px; */
 }
 .main__info {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main__content--box {
@@ -27,6 +27,22 @@ align-items: center;
     .main__btn {
         margin-top: 50px;
         margin-bottom: 10px;
+    }
+    .main__info--textbox {
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main__info {
+      flex-direction: row;
+      margin-bottom: 96px;
+    }
+
+    .main__info--textbox {
+        padding: 0 108px;
     }
 }
 

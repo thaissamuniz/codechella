@@ -1,10 +1,9 @@
 import './style.css'
-import Text from '../Text'
 
 const DateStripe = ({textContent}) => {
     return (
         <div className='date__stripe'>
-            <Text font={"'Calistoga', cursive"} textWidth={'32px'} text={textContent}/>
+            <h3 className='date__stripe--text'>{textContent}</h3>
         </div>
     )
 }

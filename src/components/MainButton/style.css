@@ -11,12 +11,14 @@
     background-position: 220px;
     box-shadow: 4px 4px 0px #444444;
     border-radius: 10px;
+    display: block;
+    margin-top: 35px;
     /* line-height: 40px; */
 }
 
 @media screen and (min-width: 768px) {
     .main__button {
-        display: block;
+        width: 328px;
         height: 56px;
     }
 }
