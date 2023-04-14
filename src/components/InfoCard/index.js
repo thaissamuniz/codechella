@@ -1,7 +1,7 @@
 import './style.css';
 import RoundedImg from '../RoundedImg';
 import Text from '../Text';
-import TextBox from '../TextBox';
+// import TextBox from '../TextBox';
 
 
 function VerifyScreenSize({ cardImgM, cardImgTd }) {
@@ -20,7 +20,8 @@ const InfoCard = ({ cardImgMb, cardImgTdk, cardTitle, cardText }) => {
         <div className='infocard'>
             <VerifyScreenSize cardImgM={cardImgMb} cardImgTd={cardImgTdk} />
             <Text font={"'Raleway', sans-serif"} textSize={'32px'} text={cardTitle} />
-            <TextBox text={cardText} />
+            {/* <TextBox text={cardText} /> */}
+            <p className='infocard__content'>{cardText}</p>
         </div>
     )
 }

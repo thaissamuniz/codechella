@@ -8,8 +8,8 @@ import Footer from './components/Footer';
 // import ImageDn from './components/ImageDn';
 // import bannerImg from './img/Banner - Homepage.svg';
 // import ExperienceScreen from './components/ExperienceScreen';
-// import SectorMap from './components/SectorMap';
-import InfoScreen from './components/InfoScreen';
+import SectorMap from './components/SectorMap';
+// import InfoScreen from './components/InfoScreen';
 // import BuyTicketScreen from './components/BuyTicketScreen';
 
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <InfoScreen />
+      <SectorMap />
       <Footer />
     </div>
   );
