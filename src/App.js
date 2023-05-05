@@ -1,8 +1,9 @@
 import './App.css';
-import Header from './components/Header';
+// import Header from './components/Header';
 // import Banner from './components/Banner';
-import MainContent from './components/MainContent';
+import MainContent from './pages/MainContent';
 import Footer from './components/Footer';
+import HeaderDesk from './components/MenuDesk';
 // import TicketScreen from './components/TicketScreen';
 
 // import ImageDn from './components/ImageDn';
@@ -16,7 +17,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <MenuDesk />
       <MainContent />
       <Footer />
     </div>

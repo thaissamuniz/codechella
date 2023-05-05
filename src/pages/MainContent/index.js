@@ -1,16 +1,25 @@
-import AttractionList from '../AttractionList';
-import DateStripe from '../DateStripe';
-import MainButton from '../MainButton';
-import RoundedImg from '../RoundedImg';
-import Text from '../Text'
-import TextBox from '../TextBox';
-import Banner from '../Banner';
+import AttractionList from '../../components/AttractionList';
+import DateStripe from '../../components/DateStripe';
+import MainButton from '../../components/MainButton';
+import RoundedImg from '../../components/RoundedImg';
+import Text from '../../components/Text'
+import TextBox from '../../components/TextBox';
+import Banner from '../../components/Banner';
 import './style.css';
 import hpimage from '../../img/Homepage1.png';
 import bnImage from '../../img/Banner - Homepage.svg';
-import ImageDn from '../ImageDn';
+import ImageDn from '../../components/ImageDn';
 import bnImageDesk from '../../img/BannerHomeDesk.png';
 import hpImageTablet from '../../img/Hm-tablet.png';
+
+function DefineTextSize() {
+    const screenSize = window.screen.width;
+    if (screenSize >= 360 && screenSize < 768) {
+        return <Text font={'"Calistoga", serif'} textSize={'48px'} text={'/Line-Up/'} />
+    } else if (screenSize >= 768) {
+        return <Text font={'"Calistoga", serif'} textSize={'64px'} text={'/Line-Up/'} />
+    }
+}
 
 const MainContent = () => {
     const x = window.screen.width;
@@ -27,14 +36,7 @@ const MainContent = () => {
                         <MainButton textContent={'Comprar Ingresso!'} />
                     </div>
                 </div>
-                {
-                    x === 360 &&
-                    <Text font={'"Calistoga", serif'} textSize={'48px'} text={'/Line-Up/'} />
-                }
-                {
-                    x === 768 &&
-                    <Text font={'"Calistoga", serif'} textSize={'64px'} text={'/Line-Up/'} />
-                }
+                <DefineTextSize />
                 <DateStripe textContent={'SÁBADO <11/03>'} />
                 <AttractionList />
                 <DateStripe textContent={'DOMINGO <12/03>'} />

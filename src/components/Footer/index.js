@@ -8,7 +8,7 @@ const Footer = () => {
             <div className='footer__content'>
                 <Logo />
                 <div className='footer__media'>
-                    <TextBox text={'Acesse nossas redes:'} />
+                    <p className='footer__media--social'>Acesse nossas redes:</p>
                     <ul className='social'>
                         <li>
                             <a href='https://facebook.com' target={'_blank'} className='wpp social--icon'></a>

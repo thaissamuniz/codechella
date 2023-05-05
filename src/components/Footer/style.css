@@ -14,6 +14,11 @@ footer {
     margin-bottom: 32px;
 }
 
+.footer__media--social{
+    color: white;
+    font-size: 20px;
+}
+
 li {
     list-style: none;
 }
