@@ -15,8 +15,22 @@
     padding: 32px 23px;
 }
 
+.main__info--txt {
+    color: #ffff;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+
 .main__btn {
     margin-top: 24px;
+}
+
+.main__content--txt {
+    color: white;
+    font-family: 'Calistoga', serif;
+    font-size: 48px;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -33,6 +47,10 @@
        align-items: center;
        flex-direction: column;
     }
+    .main__content--txt {
+        font-size: 64px;
+        margin-bottom: 37px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -42,7 +60,17 @@
     }
 
     .main__info--textbox {
-        padding: 0 108px;
+        padding: 0 161px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .main__content--box {
+        padding: 40px 198px;
+    }
+
+    .main__info--textbox {
+        padding: 0 180px;
     }
 }
 

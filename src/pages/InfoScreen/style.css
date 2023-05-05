@@ -9,4 +9,7 @@
     .info {
         padding: 24px 222px;
     }
+    .info__txt {
+        margin-bottom: 48px;
+    }
 }

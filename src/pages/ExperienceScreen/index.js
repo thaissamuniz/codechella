@@ -6,7 +6,7 @@ import experienceOne from '../../img/A experiência1.png';
 import experienceTwo from '../../img/A experiência2.png';
 import experienceThree from '../../img/A experiência3.png';
 
-import experienceOneTd from '../../img/experience-td1.png';
+import experienceOneTd from 'img/experience-td1.png';
 import experienceTwoTd from '../../img/experience-td2.png';
 import experienceThreeTd from '../../img/experience-td3.png';
 

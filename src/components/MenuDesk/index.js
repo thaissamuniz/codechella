@@ -17,7 +17,9 @@ const MenuDesk = () => {
     ]
     return (
         <header className='menu'>
-            <Logo />
+            <MenuLink to={'/'}>
+                <Logo />
+            </MenuLink>
             <ul className='menu__list'>
                 {
                     menuItens.map(item => <li className='menu__item' key={item.name}><MenuLink to={item.url}>{item.name}</MenuLink></li>)

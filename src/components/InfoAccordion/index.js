@@ -1,6 +1,10 @@
 import './style.css';
 
 const InfoAccordion = ({ infoTitle, infoText }) => {
+
+    const openInfo = () => {
+
+    }
     return (
         <div>
             <div className='info__header'>

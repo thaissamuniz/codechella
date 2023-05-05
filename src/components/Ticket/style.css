@@ -37,9 +37,9 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .ticket {
+    /* .ticket {
         margin-bottom: 64px;
-    }
+    } */
     .ticket__content {
        display: flex;
     }

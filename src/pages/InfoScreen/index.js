@@ -8,9 +8,11 @@ import InfoAccordion from '../../components/InfoAccordion';
 const InfoScreen = () => {
     return (
         <section className='info__screen'>
-            <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk}/>
+            <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk} />
             <div className='info'>
-                <Text font={'Calistoga'} textSize={'32px'} text={'Perguntas Frequentes:'} />
+                <div className='info__txt'>
+                    <Text font={'Calistoga'} textSize={'32px'} text={'Perguntas Frequentes:'} />
+                </div>
                 <div>
                     <InfoAccordion infoTitle={'Quais serão as atrações?'} infoText={'Teremos dois dias de shows, o primeiro (11/03) com bandas de rock, e o segundo (12/03) com bandas pop. Confira o line-up em detalhes clicando neste link!'} />
                 </div>

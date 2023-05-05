@@ -16,10 +16,24 @@
    .infocard {
     margin-bottom: 64px;
    }
+
+   .infocard__img {
+    margin-bottom: 32px;
+    }
+
+    .infocard__content {
+        padding: 0 96px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
     .infocard {
-        width: 382px;
+        width: 100%;
+        flex-direction: row;
+    }
+    .infocard__content {
+        padding: 0 0px;
+        text-align: start;
+        margin-left: 48px;
     }
  }

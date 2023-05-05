@@ -12,6 +12,9 @@
 .ticket__screen--txt {
     margin-top: 44px;
     margin-bottom: 32px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 
@@ -24,5 +27,6 @@
 @media screen and (min-width: 1440px) {
     .ticket__screen--content {
         padding: 0 324px;
+        padding-bottom: 60px;
     }
 } 

@@ -1,10 +1,11 @@
-import './style.css';
+import styles from './style.module.css';
+
 const DataInput = ({ lb, tp }) => {
     return (
-        <div className='data__input--d'>
-            <label className='data__input--lb'>
+        <div className={styles.data__inputd}>
+            <label className={styles.data__inputlb}>
                 {lb}
-                <input type={tp} className='data__input' />
+                <input type={tp} className={styles.data__input} />
             </label>
         </div>
     )

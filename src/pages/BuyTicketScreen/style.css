@@ -27,6 +27,7 @@
     width: 312px;
     height: 48px;
     margin-bottom: 32px;
+    border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -38,5 +39,9 @@
 @media screen and (min-width: 1440px) {
     .buy__ticket--content {
         padding: 0 322px;
+    }
+
+    .buy__ticket--opt {
+        width: 320px;
     }
 }

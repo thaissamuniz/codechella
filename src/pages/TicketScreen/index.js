@@ -8,11 +8,9 @@ import Ticket from '../../components/Ticket';
 const TicketScreen = () => {
     return (
         <section className='ticket__screen'>
-            <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk}/>
+            <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk} />
             <div className='ticket__screen--content'>
-                <div className='ticket__screen--txt'>
-                    <Text font={"'Raleway', sans-serif"} textSize={'32px'} text={'Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!'} />
-                </div>
+                <h2 className='ticket__screen--txt'> Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!</h2>
                 <Ticket />
             </div>
 

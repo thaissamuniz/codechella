@@ -3,8 +3,7 @@ import './style.css';
 
 const MainButton = ({ textContent, to }) => {
     return (
-        // <a href='#' className='main__button'>{textContent}</a>
-        <Link to={to} end className='main__button'>{textContent}</Link>
+        <Link to={to} className='main__button'>{textContent}</Link>
         
     )
 }

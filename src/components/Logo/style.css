@@ -1,7 +1,10 @@
+.logo{
+    text-align: center;
+}
 .logo__img {
     width: 234px;
 }
 
-@media screen and (min-width: 1440px) {
-  
+@media screen and (min-width: 768px) {
+    
  }
