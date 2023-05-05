@@ -1,9 +1,9 @@
 import './style.css'
-import Banner from '../Banner';
+import Banner from '../../components/Banner';
 import bnImage from '../../img/Banner -ingresso.png';
 import bnImageDesk from '../../img/BannerTicketDesk.png'
-import Text from '../Text';
-import Ticket from '../Ticket';
+import Text from '../../components/Text';
+import Ticket from '../../components/Ticket';
 
 const TicketScreen = () => {
     return (

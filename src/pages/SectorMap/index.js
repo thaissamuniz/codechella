@@ -1,10 +1,10 @@
 import './style.css';
 import mapImage from '../../img/Mapa setores 1.png';
-import Banner from '../Banner';
+import Banner from '../../components/Banner';
 import mapBanner from '../../img/Banner - Mapa de setores.png'
 import mapBannerDesk from  '../../img/BannerSectorMapDesk.png';
-import MapSubtitle from '../MapSubtitle';
-import InfoCard from '../InfoCard';
+import MapSubtitle from '../../components/MapSubtitle';
+import InfoCard from '../../components/InfoCard';
 import sectorMapOne from '../../img/Mapa de setores2.png';
 import sectorMapTwo from '../../img/Mapa de setores3.png';
 import sectorMapThree from '../../img/Mapa de setores4.png';

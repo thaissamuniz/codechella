@@ -1,9 +1,9 @@
 import './style.css';
-import Banner from '../Banner';
+import Banner from '../../components/Banner';
 import bnImage from '../../img/Banner - Infos gerais.png';
 import bnImageDesk from '../../img/BannerInfoDesk.png';
-import Text from '../Text';
-import InfoAccordion from '../InfoAccordion';
+import Text from '../../components/Text';
+import InfoAccordion from '../../components/InfoAccordion';
 
 const InfoScreen = () => {
     return (

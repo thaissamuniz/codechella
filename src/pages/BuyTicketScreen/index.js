@@ -1,9 +1,9 @@
 import './style.css';
-import Banner from '../Banner';
+import Banner from '../../components/Banner';
 import bnImage from '../../img/Banner - Garanta seu ingresso.png';
-import Text from '../Text';
-import DataInput from '../DataInput';
-import MainButton from '../MainButton';
+import Text from '../../components/Text';
+import DataInput from '../../components/DataInput';
+import MainButton from '../../components/MainButton';
 const BuyTicketScreen = () => {
     return (
         <section className='buy__ticket'>

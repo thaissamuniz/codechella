@@ -1,5 +1,5 @@
 import './style.css';
-import Banner from "../Banner"
+import Banner from "../../components/Banner"
 import bannerImg from '../../img/Banner - A Experiência (1).png';
 import experienceBannerDesk from '../../img/BannerExperienceDesk.png';
 import experienceOne from '../../img/A experiência1.png';
@@ -10,7 +10,7 @@ import experienceOneTd from '../../img/experience-td1.png';
 import experienceTwoTd from '../../img/experience-td2.png';
 import experienceThreeTd from '../../img/experience-td3.png';
 
-import InfoCard from '../InfoCard';
+import InfoCard from '../../components/InfoCard';
 
 const ExperienceScreen = () => {
     return (

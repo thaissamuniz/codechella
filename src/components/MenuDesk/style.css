@@ -5,6 +5,9 @@
     background-color: #4650BD;
     
 }
+.menu__list {
+    align-self: center;
+}
 .menu__off {
     display: none;
 }

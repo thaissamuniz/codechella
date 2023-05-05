@@ -22,8 +22,8 @@ function DefineTextSize() {
 }
 
 const MainContent = () => {
-    const x = window.screen.width;
-    // console.log(x)
+    // const x = window.screen.width;
+    // // console.log(x)
     return (
         <main className='main__content'>
             <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk} />
@@ -33,7 +33,7 @@ const MainContent = () => {
                     <div className='main__info--textbox'>
                         <Text font={'"Raleway", sans-serif'} textSize={'32px'} text={'<11 e 12 de Março> Aluródromo de São Paulo'} />
                         <TextBox text={'Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!'} />
-                        <MainButton textContent={'Comprar Ingresso!'} />
+                        <MainButton to={'/comprar-ingresso'} textContent={'Comprar Ingresso!'} />
                     </div>
                 </div>
                 <DefineTextSize />

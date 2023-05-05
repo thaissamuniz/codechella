@@ -1,6 +1,6 @@
 import './style.css';
 import Logo from '../Logo';
-import { Link } from 'react-router-dom';
+import MenuLink from 'components/MenuLink';
 
 // function ativeMenu() {
 //     const screenSize = window.screen.width;
@@ -10,17 +10,17 @@ import { Link } from 'react-router-dom';
 // }
 const MenuDesk = () => {
     const menuItens = [
-        { name: 'A Expêriencia', url: 'https://www.google.com' },
-        { name: 'Mapa de Setores', url: 'https://wwww.facebook.com' },
-        { name: 'Informações', url: 'https://wwww.facebook.com' },
-        { name: 'Ingresso', url: 'https://wwww.facebook.com' }
+        { name: 'A Expêriencia', url: '/aexperiencia' },
+        { name: 'Mapa de Setores', url: '/mapa-setores' },
+        { name: 'Informações', url: '/informacoes' },
+        { name: 'Ingresso', url: '/ingresso' }
     ]
     return (
         <header className='menu'>
             <Logo />
-            <ul>
+            <ul className='menu__list'>
                 {
-                    menuItens.map(item => <li className='menu__item' key={item.name}><Link className='menu__link' to={item.url}>{item.name}</Link></li>)
+                    menuItens.map(item => <li className='menu__item' key={item.name}><MenuLink to={item.url}>{item.name}</MenuLink></li>)
                 }
             </ul>
         </header>
