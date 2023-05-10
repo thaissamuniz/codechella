@@ -1,18 +1,26 @@
+import { useState } from 'react';
 import './style.css';
 
 const InfoAccordion = ({ infoTitle, infoText }) => {
 
-    const openInfo = () => {
-
+    const [show, setShow] = useState(false);
+    const handleOpen = () => {
+        setShow(!show)
     }
+
     return (
-        <div>
-            <div className='info__header'>
+        <div className='info__accordion'>
+            <div className='info__header' onClick={handleOpen}>
                 <h3>{infoTitle}</h3>
             </div>
-            <div className='info__content'>
-                <p>{infoText}</p>
-            </div>
+            {
+                show && (
+                    <div className='info__content'>
+                        <p>{infoText}</p>
+                    </div>
+                )
+            }
+
         </div>
     )
 }
