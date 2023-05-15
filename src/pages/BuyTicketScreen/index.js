@@ -11,8 +11,14 @@ const BuyTicketScreen = () => {
             <div className='buy__ticket--content'>
                 <Text font={"'Calistoga', sans-serif"} textSize={'32px'} text={'Preencha o formulário a seguir:'} />
                 <form>
-                    <DataInput lb={'Nome Completo:'} tp={'text'} />
-                    <DataInput lb={'Email:'} tp={'email'} />
+                    <label className='buy__ticket--lb'>
+                        Nome Completo
+                        <input className='buy__ticket--input' type='text' required />
+                    </label>
+                    <label className='buy__ticket--lb'>
+                        Email
+                        <input className='buy__ticket--input' type='email' required />
+                    </label>
                     <label className='buy__ticket--slc'>Tipo de ingresso</label>
                     <select className='buy__ticket--opt'>
                         <option>Tipo de Ingresso</option>
@@ -21,7 +27,7 @@ const BuyTicketScreen = () => {
                         <option>Padrão</option>
                     </select>
                     <DataInput lb={'Data de Nascimento:'} tp={'date'} />
-                    <MainButton textContent={'Avançar!'}/>
+                    <MainButton textContent={'Avançar!'} />
                 </form>
             </div>
         </section>

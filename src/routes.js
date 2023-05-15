@@ -12,7 +12,7 @@ import BuyTicketScreen from "pages/BuyTicketScreen";
 function AppRoutes() {
     return (
         <BrowserRouter>
-            <MenuDesk />
+            {/* <MenuDesk /> */}
             <Routes>
                 <Route path="/" element={<MainContent />} />
                 <Route path="/aexperiencia" element={<ExperienceScreen />} />
