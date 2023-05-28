@@ -29,11 +29,11 @@
 @media screen and (min-width: 1440px) {
     .infocard {
         width: 100%;
-        flex-direction: row;
+        /* flex-direction: row; */
     }
     .infocard__content {
         padding: 0 0px;
-        text-align: start;
-        margin-left: 48px;
+        /* text-align: start; */
+        /* margin-left: 48px; */
     }
  }

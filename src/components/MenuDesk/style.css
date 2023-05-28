@@ -1,25 +1,52 @@
 .menu {
-    display: flex;
-    justify-content: space-around;
-    padding: 32px 0;
-    background-color: #4650BD;
-    
-}
-.menu__list {
-    align-self: center;
-}
-.menu__off {
     display: none;
 }
-.menu__item {
-    display: inline;
+
+@media screen and (min-width: 768px) {
+    .menu {
+        display: block;
+        background-color: #4650BD;
+    }
+    .menu__logo--tbt {
+        text-align: center;
+        padding-top: 12px;
+    }
+    .menu__list {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 32px;
+    }
+    .menu__link {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 20px;
+        margin-right: 32px;
+       
+    }
 }
 
-.menu__link {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 20px;
-    margin-right: 32px;
-   
+@media screen and (min-width: 1440px) {
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        padding: 32px 0;
+        
+    }
+    .menu__list {
+        align-self: center;
+        padding-bottom: 0;
+    }
+    .menu__off {
+        display: none;
+    }
+    .menu__item {
+        display: inline;
+    }
+    
+    .menu__link {
+        font-size: 20px;
+        margin-right: 32px;
+       
+    }
 }

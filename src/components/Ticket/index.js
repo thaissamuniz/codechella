@@ -15,11 +15,11 @@ const Ticket = () => {
                     <img src={qrCode} alt='' />
                 </div>
                 <div>
-                    <h5 className='ticket__name ticket__info'>Nome</h5>
-                    <p className='ticket__info'>Tipo de Ingresso</p>
-                    <p className='ticket__info'>setor</p>
-                    <p className='ticket__info'>data</p>
-                    <p className='ticket__info'>local</p>
+                    <h5 className='ticket__name ticket__info'>{localStorage.getItem('name')}</h5>
+                    <p className='ticket__info'>{localStorage.getItem('ticket')}</p>
+                    <p className='ticket__info'>Pista Premium</p>
+                    <p className='ticket__info'>13/05</p>
+                    <p className='ticket__info'>São Paulo - SP</p>
                 </div>
             </div>
         </section>

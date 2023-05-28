@@ -8,17 +8,19 @@
     font-weight: 700;
     background-image: url('../../img/local_activity.svg');
     background-repeat: no-repeat;
-    background-position: 220px;
+    background-position: 80%;
     box-shadow: 4px 4px 0px #444444;
     border-radius: 10px;
     display: block;
     margin-top: 35px;
-    width: 328px;
+    width: 100%;
+    text-align: center;
     /* line-height: 40px; */
 }
 
 @media screen and (min-width: 768px) {
     .main__button {
         height: 56px;
+        max-width: 360px;
     }
 }

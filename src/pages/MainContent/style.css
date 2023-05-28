@@ -22,6 +22,10 @@
     text-align: center;
 }
 
+.main__info--textbox {
+    margin-top: 32px;
+}
+
 .main__btn {
     margin-top: 24px;
 }
@@ -31,6 +35,8 @@
     font-family: 'Calistoga', serif;
     font-size: 48px;
     text-align: center;
+    margin-top: 64px;
+    margin-bottom: 80px;
 }
 
 @media screen and (min-width: 768px) {

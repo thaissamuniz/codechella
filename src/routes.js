@@ -6,13 +6,14 @@ import InfoScreen from "pages/InfoScreen";
 import TicketScreen from "pages/TicketScreen";
 import SectorMap from "pages/SectorMap";
 import BuyTicketScreen from "pages/BuyTicketScreen";
-;
+import Menu from "components/Menu";
 
 
 function AppRoutes() {
     return (
         <BrowserRouter>
-            {/* <MenuDesk /> */}
+            <Menu />
+            <MenuDesk />
             <Routes>
                 <Route path="/" element={<MainContent />} />
                 <Route path="/aexperiencia" element={<ExperienceScreen />} />

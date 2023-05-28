@@ -18,7 +18,9 @@ const MenuDesk = () => {
     return (
         <header className='menu'>
             <MenuLink to={'/'}>
-                <Logo />
+                <div className='menu__logo--tbt'>
+                    <Logo />
+                </div>
             </MenuLink>
             <ul className='menu__list'>
                 {

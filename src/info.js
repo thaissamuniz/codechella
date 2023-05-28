@@ -7,7 +7,7 @@ const faqs = [
     {
         question: "Qual é a classificação etária?",
         answer:
-            "Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.",
+            "A partir de 16 anos, todo mundo pode entrar. De 13 a 15 anos, tem que estar acompanhado dos pais ou responsáveis legais. Menores de 10 anos não podem entrar.",
     },
     {
         question: "Quais são os setores disponíveis?",

@@ -1,7 +1,7 @@
 .info__header {
     background-color: #4650BD;
     color: white;
-    font-family:'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
@@ -11,10 +11,10 @@
     background-position-y: center;
     padding: 16px;
     box-sizing: border-box;
-    
+
 }
 
-.info__accordion{
+.info__accordion {
     margin-bottom: 8px;
 }
 
@@ -26,7 +26,17 @@
     line-height: 40px;
     color: #444444;
     padding: 16px;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 16px;
+    transition: max-height 0.4s ease-out;
+}
+
+.info__content--active {
+    max-height: 300px;
+}
 
 h3 {
     margin: 0;

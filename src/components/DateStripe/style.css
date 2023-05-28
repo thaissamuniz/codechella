@@ -20,9 +20,9 @@
    }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
     
     .date__stripe--text {
-        margin: 24px 0;
+        margin: 25px 0;
     }
  }
