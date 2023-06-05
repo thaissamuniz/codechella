@@ -1,3 +1,4 @@
+import './style.css'
 const { NavLink } = require("react-router-dom")
 
 const MenuLink = ({ children, to }) => {

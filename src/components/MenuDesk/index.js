@@ -2,12 +2,6 @@ import './style.css';
 import Logo from '../Logo';
 import MenuLink from 'components/MenuLink';
 
-// function ativeMenu() {
-//     const screenSize = window.screen.width;
-//     if (screenSize === 360) {
-
-//     }
-// }
 const MenuDesk = () => {
     const menuItens = [
         { name: 'A Expêriencia', url: '/aexperiencia' },
@@ -24,7 +18,7 @@ const MenuDesk = () => {
             </MenuLink>
             <ul className='menu__list'>
                 {
-                    menuItens.map(item => <li className='menu__item' key={item.name}><MenuLink to={item.url}>{item.name}</MenuLink></li>)
+                    menuItens.map(item => <li className='menu__item--dsk' key={item.name}><MenuLink to={item.url}>{item.name}</MenuLink></li>)
                 }
             </ul>
         </header>

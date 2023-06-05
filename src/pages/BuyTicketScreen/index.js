@@ -1,9 +1,8 @@
 import './style.css';
 import Banner from '../../components/Banner';
 import bnImage from '../../img/Banner - Garanta seu ingresso.png';
+import bnDesk from '../../img/BannerBuyTicketDesk.png';
 import Text from '../../components/Text';
-import DataInput from '../../components/DataInput';
-import MainButton from '../../components/MainButton';
 import { useState } from 'react';
 
 const BuyTicketScreen = () => {
@@ -52,14 +51,16 @@ const BuyTicketScreen = () => {
 
     return (
         <section className='buy__ticket'>
-            <Banner bannerImage={bnImage} />
+            <Banner bannerImage={bnImage} bannerImageDesk={bnDesk} />
             <div className='buy__ticket--content'>
                 <Text font={"'Calistoga', sans-serif"} textSize={'32px'} text={'Preencha o formulário a seguir:'} />
                 <form>
-                    <label className='buy__ticket--lb'>
-                        Nome Completo
-                        <input className='buy__ticket--input' required type='text' value={nome} onChange={(e) => { setNome(e.target.value) }} />
-                    </label>
+                    <div>
+                        <label className='buy__ticket--lb'>
+                            Nome Completo
+                            <input className='buy__ticket--input' required type='text' value={nome} onChange={(e) => { setNome(e.target.value) }} />
+                        </label>
+                    </div>
                     <label className='buy__ticket--lb'>
                         Email
                         <input className='buy__ticket--input' required type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -74,7 +75,7 @@ const BuyTicketScreen = () => {
                     <label className='buy__ticket--lb'>Data de Nascimento</label>
                     <input className='buy__ticket--input' type='date' value={birthday} onChange={(e) => setBirthday(e.target.value)} />
                     {/* <MainButton textContent={'Avançar!'} /> */}
-                    <button onClick={validateForm}>avançar</button>
+                    <button onClick={validateForm} className='buy__ticket--btn'>Avançar!</button>
                 </form>
             </div>
         </section>

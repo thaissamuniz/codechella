@@ -40,7 +40,7 @@
     .menu__off {
         display: none;
     }
-    .menu__item {
+    .menu__item--dsk {
         display: inline;
     }
     

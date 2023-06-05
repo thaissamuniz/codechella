@@ -5,6 +5,9 @@
 .buy__ticket--content {
     padding: 24px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buy__ticket--lb {
@@ -16,8 +19,9 @@
 }
 
 .buy__ticket--input{
-    display: block;
+    /* display: block; */
     width: 100%;
+    max-width: 795px;
     height: 48px;
     padding: 10px;
     box-sizing: border-box;
@@ -36,6 +40,8 @@
     line-height: 38px;
 }
 
+
+
 .buy__ticket--opt {
     display: block;
     font-family: 'Raleway', sans-serif;
@@ -49,6 +55,25 @@
     height: 48px;
     margin-bottom: 32px;
     border: none;
+    max-width: 795px;
+}
+
+.buy__ticket--btn{
+    font-family: 'Raleway', sans-serif;
+    line-height: 36px;
+    padding: 8px 16px;
+    color: white;
+    background-color: #4650BD;
+    box-shadow: 4px 4px 0px #000000;
+    border-radius: 16px;
+    border: none;
+    width: 164px;
+    font-size: 20px;
+    background-image: url('../../img/arrow_activity.svg');
+    background-repeat: no-repeat;
+    background-position-x: 92%;
+    background-position-y: center;
+    background-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,11 +83,8 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .buy__ticket--content {
+    /* .buy__ticket--content {
         padding: 0 322px;
-    }
-
-    .buy__ticket--opt {
-        width: 320px;
-    }
+       
+    } */
 }
