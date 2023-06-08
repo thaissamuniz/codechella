@@ -28,7 +28,7 @@ const Menu = () => {
             <nav className={'menu__item' + (active ? " menu__item--open" : '')}>
                 <ul className='menu__items'>
                     {
-                        menuItens.map(item => <li className='menu__item--dsk' key={item.name}><MenuLink to={item.url}>{item.name}</MenuLink></li>)
+                        menuItens.map(item => <li className='menu__item--dsk' key={item.name} onClick={ToggleMode}><MenuLink to={item.url}>{item.name}</MenuLink></li>)
                     }
                 </ul>
             </nav>

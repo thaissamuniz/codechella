@@ -1,81 +1,168 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+
 import './style.css';
 import Banner from '../../components/Banner';
 import bnImage from '../../img/Banner - Garanta seu ingresso.png';
 import bnDesk from '../../img/BannerBuyTicketDesk.png';
 import Text from '../../components/Text';
-import { useState } from 'react';
+
+
+const inputData = {
+    value: "",
+    errorMessage: ""
+}
+
+const InputForm = ({ label, inputData, type, onChange, validateFun }) => {
+    let className = '';
+
+    if (inputData.errorMessage) {
+        className = " input-invalid"
+    }
+
+    
+
+    return <div className={"buy__ticket--cont" + className} >
+        <label className='buy__ticket--lb'>
+            {label}
+            <input className='buy__ticket--input' type={type} value={inputData.value} onChange={onChange} />
+        </label>
+        <span className='error-message'>{inputData.errorMessage}</span>
+    </div>
+}
+
 
 const BuyTicketScreen = () => {
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [birthday, setBirthday] = useState('');
+    const [nome, setNome] = useState({...inputData});
+    const [email, setEmail] = useState({...inputData});
+    const [birthday, setBirthday] = useState({...inputData});
     const [ticket, setTicket] = useState('');
+    const navigate = useNavigate();
 
-    const userAge = () => {
-        let yearOfBirth = new Date(birthday).getFullYear();
+    const getUserAge = () => {
+        let yearOfBirth = new Date(birthday.value).getFullYear();
         let currentYear = new Date().getFullYear();
         let age = currentYear - yearOfBirth;
         return age;
     }
 
-    const validateForm = (e) => {
-        e.preventDefault();
+    function saveData() {
+        localStorage.setItem('name', nome);
+        localStorage.setItem('ticket', `Ingresso ${ticket}`);
+    }
 
-        if (nome === '' || !nome.includes(' ')) {
+    const validaNome = () => {
+        if (nome.value.split(" ").filter(e => e).length < 2) {
             console.log('nome e sobrenome são obrigatorios')
-            return false
+            setNome({ ...nome, errorMessage: "Nome e Sobrenome são obrigatórios" })
+            return
         }
-        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-            console.log('email inválido')
-            return false
+        setNome({ ...nome })
+        return true
+    }
+
+    const validaEmail = () => {
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+            console.log('Email inválido')
+            setEmail({ ...email, errorMessage: "Email inválido" })
+            return
+        }
+        setEmail({ ...email })
+        return true
+    }
+
+    const validaBirthday = () => {
+        if (!birthday.value) {
+            setBirthday({ ...birthday, errorMessage: "Campo obrigatório" })
+            return
+        }
+        if (!getUserAge() < 16) {
+            const errorMessage = 'entrada permitida apenas para maiores de 16 anos.'
+            console.log(errorMessage);
+            setBirthday({ ...birthday, errorMessage })
+            return
+        }
+        setBirthday({ ...birthday })
+        return true
+    }
+
+    const validateForm = () => {
+        if(validaNome()) {
+            return true
+        }
+        
+        if(validaEmail()) {
+            return true
         }
 
-        if (!birthday) {
-            console.log('digite a data de nascimento');
-        }
-
-        if (userAge() < 16) {
-            console.log('entrada permitida apenas para maiores de 16 anos.');
+        if(validaBirthday()) {
+            return true
         }
 
         if (ticket === '') {
             console.log('selecione o tipo do ingresso');
+            return false
         }
-
-        localStorage.setItem('name', nome)
-        localStorage.setItem('ticket', `Ingresso ${ticket}`)
 
         return true
     }
 
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if (!validateForm()) {
+            return;
+        }
+
+        saveData();
+        navigate('/ingresso')
+    }
+
+    const onChangeName = (e) => {
+        setNome({ ...nome, value: e.target.value })
+    }
+
+    const onChangeEmail = (e) => {
+        setEmail({ ...email, value: e.target.value })
+    }
+
+    const onChangeBirthday = (e) => {
+        setBirthday({ ...birthday, value: e.target.value })
+    }
 
     return (
         <section className='buy__ticket'>
             <Banner bannerImage={bnImage} bannerImageDesk={bnDesk} />
             <div className='buy__ticket--content'>
                 <Text font={"'Calistoga', sans-serif"} textSize={'32px'} text={'Preencha o formulário a seguir:'} />
-                <form>
-                    <div>
-                        <label className='buy__ticket--lb'>
-                            Nome Completo
-                            <input className='buy__ticket--input' required type='text' value={nome} onChange={(e) => { setNome(e.target.value) }} />
-                        </label>
+                <form onSubmit={onSubmit}>
+                    <InputForm
+                        label="Nome"
+                        type="text"
+                        onChange={onChangeName}
+                        inputData={nome}
+                    />
+                    <InputForm
+                        label="Email"
+                        type="email"
+                        onChange={onChangeEmail}
+                        inputData={email}
+                    />
+                    <div className="buy__ticket--cont">
+                        <label className='buy__ticket--slc'>Tipo de ingresso</label>
+                        <select className='buy__ticket--opt' onChange={(e) => setTicket(e.target.value)}>
+                            <option label="Padrão">padrão</option>
+                            <option label="Cortesia" >cortesia</option>
+                            <option label="Premium">premium</option>
+                        </select>
                     </div>
-                    <label className='buy__ticket--lb'>
-                        Email
-                        <input className='buy__ticket--input' required type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                    </label>
-                    <label className='buy__ticket--slc'>Tipo de ingresso</label>
-                    <select className='buy__ticket--opt' onChange={(e) => setTicket(e.target.value)}>
-                        <option> </option>
-                        <option>Cortesia</option>
-                        <option>Premium</option>
-                        <option>Padrão</option>
-                    </select>
-                    <label className='buy__ticket--lb'>Data de Nascimento</label>
-                    <input className='buy__ticket--input' type='date' value={birthday} onChange={(e) => setBirthday(e.target.value)} />
-                    {/* <MainButton textContent={'Avançar!'} /> */}
-                    <button onClick={validateForm} className='buy__ticket--btn'>Avançar!</button>
+                    <InputForm
+                        label="Data de Nascimento"
+                        type="date"
+                        onChange={onChangeBirthday}
+                        inputData={birthday}
+                    />
+                    <button className='buy__ticket--btn'>Avançar!</button>
                 </form>
             </div>
         </section>
