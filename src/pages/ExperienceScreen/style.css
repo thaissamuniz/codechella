@@ -6,8 +6,8 @@
 .eCont{
     box-sizing: border-box;
     padding: 0 24px;
-    margin-bottom: -65px;
 }
+
 
 .bn {
     margin-bottom: 32px;
@@ -16,6 +16,14 @@
 @media screen and (min-width: 1440px) {
     .eCont{
         padding: 0 121px;
+    }
+
+    .special__class {
+        flex-direction: row !important;
+    }
+    
+    .special__class--middle {
+        flex-direction: row-reverse !important;
     }
     
  }

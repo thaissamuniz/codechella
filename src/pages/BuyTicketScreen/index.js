@@ -34,7 +34,7 @@ const BuyTicketScreen = () => {
     const [nome, setNome] = useState({ ...inputData });
     const [email, setEmail] = useState({ ...inputData });
     const [birthday, setBirthday] = useState({ ...inputData });
-    const [ticket, setTicket] = useState('');
+    const [ticket, setTicket] = useState('Padrão');
     const navigate = useNavigate();
 
     const getUserAge = () => {
@@ -45,7 +45,7 @@ const BuyTicketScreen = () => {
     }
 
     function saveData() {
-        localStorage.setItem('name', nome);
+        localStorage.setItem('name', nome.value);
         localStorage.setItem('ticket', `Ingresso ${ticket}`);
     }
 
@@ -74,7 +74,7 @@ const BuyTicketScreen = () => {
             setBirthday({ ...birthday, errorMessage: "Campo obrigatório" })
             return
         }
-        if (!getUserAge() < 16) {
+        if (getUserAge() < 16) {
             const errorMessage = 'entrada permitida apenas para maiores de 16 anos.'
             console.log(errorMessage);
             setBirthday({ ...birthday, errorMessage })
@@ -85,21 +85,9 @@ const BuyTicketScreen = () => {
     }
 
     const validateteForm = () => {
-        if (validateNome()) {
-            return true
-        }
 
-        if (validateEmail()) {
-            return true
-        }
-
-        if (validateBirthday()) {
-            return true
-        }
-
-        if (ticket === '') {
-            console.log('selecione o tipo do ingresso');
-            return false
+        if (!validateNome() || !validateEmail() || !validateBirthday() || ticket === '') {
+            return false;
         }
 
         return true
@@ -113,7 +101,7 @@ const BuyTicketScreen = () => {
         }
 
         saveData();
-        navigate('/ingresso')
+        navigate('/ingresso');
     }
 
     const onChangeName = (e) => {
