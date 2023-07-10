@@ -5,6 +5,10 @@
     padding: 24px;
 }
 
+.info__txt {
+    margin-bottom: 15px;
+}
+
 @media screen and (min-width: 768px) {
     .info__txt {
         margin-bottom: 32px;

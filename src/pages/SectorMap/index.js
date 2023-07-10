@@ -1,14 +1,11 @@
 import './style.css';
 import mapImage from '../../img/Mapa setores 1.png';
 import Banner from '../../components/Banner';
-import mapBanner from '../../img/Banner - Mapa de setores.png'
-import mapBannerDesk from  '../../img/BannerSectorMapDesk.png';
 import MapSubtitle from '../../components/MapSubtitle';
 import InfoCard from '../../components/InfoCard';
 import sectorMapOne from '../../img/Mapa de setores2.png';
 import sectorMapTwo from '../../img/Mapa de setores3.png';
 import sectorMapThree from '../../img/Mapa de setores4.png';
-// import Text from '../Text';
 
 import sectorMapOneTd from '../../img/sector-td1.png';
 import sectorMapTwoTd from '../../img/sector-td2.png';
@@ -17,8 +14,8 @@ import sectorMapThreeTd from '../../img/sector-td3.png';
 
 const SectorMap = () => {
     return (
-        <section className='sector__map'>
-            <Banner bannerImage={mapBanner} bannerImageDesk={mapBannerDesk}/>
+        <section className='sector__maps'>
+            <Banner cn={'banner__sm'} txt1={'Mapa de setores'} />
             <div className='sector__map--ms'>
                 <img className='map' src={mapImage} alt='' />
                 <div className='sector__map--content'>

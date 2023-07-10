@@ -6,16 +6,14 @@ import Text from '../../components/Text'
 import Banner from '../../components/Banner';
 import './style.css';
 import hpimage from '../../img/Homepage1.png';
-import bnImage from '../../img/Banner - Homepage.svg';
 import ImageDn from '../../components/ImageDn';
-import bnImageDesk from '../../img/BannerHomeDesk.png';
 import hpImageTablet from '../../img/Hm-tablet.png';
 
 
 const MainContent = () => {
     return (
         <main className='main__content'>
-            <Banner bannerImage={bnImage} bannerImageDesk={bnImageDesk} />
+            <Banner cn={'banner__hp'} txt1={'Boas vindas ao'} txt2={'#CodeChella2023'} />
             <div className='main__content--box'>
                 <div className='main__info'>
                     <RoundedImg roundedImg={hpimage} roundedImgBigger={hpImageTablet} />

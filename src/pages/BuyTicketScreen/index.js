@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 import './style.css';
 import Banner from '../../components/Banner';
-import bnImage from '../../img/Banner - Garanta seu ingresso.png';
-import bnDesk from '../../img/BannerBuyTicketDesk.png';
 import Text from '../../components/Text';
 
 
@@ -13,14 +11,14 @@ const inputData = {
     errorMessage: ""
 }
 
-const InputForm = ({ label, inputData, type, onChange, validateFun }) => {
+const InputForm = ({ label, inputData, type, onChange }) => {
     let className = '';
 
     if (inputData.errorMessage) {
         className = " input-invalid"
     }
 
-    
+
 
     return <div className={"buy__ticket--cont" + className} >
         <label className='buy__ticket--lb'>
@@ -33,9 +31,9 @@ const InputForm = ({ label, inputData, type, onChange, validateFun }) => {
 
 
 const BuyTicketScreen = () => {
-    const [nome, setNome] = useState({...inputData});
-    const [email, setEmail] = useState({...inputData});
-    const [birthday, setBirthday] = useState({...inputData});
+    const [nome, setNome] = useState({ ...inputData });
+    const [email, setEmail] = useState({ ...inputData });
+    const [birthday, setBirthday] = useState({ ...inputData });
     const [ticket, setTicket] = useState('');
     const navigate = useNavigate();
 
@@ -51,7 +49,7 @@ const BuyTicketScreen = () => {
         localStorage.setItem('ticket', `Ingresso ${ticket}`);
     }
 
-    const validaNome = () => {
+    const validateNome = () => {
         if (nome.value.split(" ").filter(e => e).length < 2) {
             console.log('nome e sobrenome são obrigatorios')
             setNome({ ...nome, errorMessage: "Nome e Sobrenome são obrigatórios" })
@@ -61,7 +59,7 @@ const BuyTicketScreen = () => {
         return true
     }
 
-    const validaEmail = () => {
+    const validateEmail = () => {
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
             console.log('Email inválido')
             setEmail({ ...email, errorMessage: "Email inválido" })
@@ -71,7 +69,7 @@ const BuyTicketScreen = () => {
         return true
     }
 
-    const validaBirthday = () => {
+    const validateBirthday = () => {
         if (!birthday.value) {
             setBirthday({ ...birthday, errorMessage: "Campo obrigatório" })
             return
@@ -86,16 +84,16 @@ const BuyTicketScreen = () => {
         return true
     }
 
-    const validateForm = () => {
-        if(validaNome()) {
-            return true
-        }
-        
-        if(validaEmail()) {
+    const validateteForm = () => {
+        if (validateNome()) {
             return true
         }
 
-        if(validaBirthday()) {
+        if (validateEmail()) {
+            return true
+        }
+
+        if (validateBirthday()) {
             return true
         }
 
@@ -110,7 +108,7 @@ const BuyTicketScreen = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if (!validateForm()) {
+        if (!validateteForm()) {
             return;
         }
 
@@ -132,7 +130,7 @@ const BuyTicketScreen = () => {
 
     return (
         <section className='buy__ticket'>
-            <Banner bannerImage={bnImage} bannerImageDesk={bnDesk} />
+            <Banner cn={'banner__bts'} txt1={'Garanta seu ingresso'} />
             <div className='buy__ticket--content'>
                 <Text font={"'Calistoga', sans-serif"} textSize={'32px'} text={'Preencha o formulário a seguir:'} />
                 <form onSubmit={onSubmit}>

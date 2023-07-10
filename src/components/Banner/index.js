@@ -1,11 +1,12 @@
 import './style.css'
 
-const Banner = ({ bannerImage, bannerImageDesk }) => {
-    // const screenSize = window.screen.width
-    // if (screenSize < 768) {
-    //     return <img src={bannerImage} alt='' />
-    // }
-    return <img className='bnDesk' src={bannerImageDesk} alt='' />
+const Banner = ({ bannerImage, cn, txt1, txt2 }) => {
+    return <div className={`banner ${cn}`}>
+        <div className='banner__title'>
+            <h1 className='title'>{txt1}</h1>
+            <span className='title'>{txt2}</span>
+        </div>
+    </div>
 }
 
 export default Banner
