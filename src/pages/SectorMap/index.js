@@ -33,9 +33,9 @@ const SectorMap = () => {
                 {/* <Text font={"'Raleway', sans-serif"} textSize={'32px'} text={'Mais detalhes sobre os setores: '} /> */}
                 <h2 className='sector__title'>Mais detalhes sobre os setores: </h2>
                 <div className='sector__about'>
-                    <InfoCard cardImgMb={sectorMapOne} cardImgTdk={sectorMapTwoTd} cardTitle={'Pista'} cardText={'Pista convencional, atendida pelos bares e banheiros das laterais do estádio. Espaço amplo, com local para sentar e descansar. Separada da pista premium por uma grade.'} />
-                    <InfoCard cardImgMb={sectorMapTwo} cardImgTdk={sectorMapThreeTd} cardTitle={'Pista Premium'} cardText={'Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área.'} />
-                    <InfoCard cardImgMb={sectorMapThree} cardImgTdk={sectorMapOneTd} cardTitle={'Cadeiras'} cardText={'Opção de cadeiras térreas ou elevadas. Acesso próximo a banheiros e bares, visão um pouco elevada em relação às pistas.'} />
+                    <InfoCard cardImg={sectorMapOne} cardImgBig={sectorMapTwoTd} cardTitle={'Pista'} cardText={'Pista convencional, atendida pelos bares e banheiros das laterais do estádio. Espaço amplo, com local para sentar e descansar. Separada da pista premium por uma grade.'} />
+                    <InfoCard cardImg={sectorMapTwo} cardImgBig={sectorMapThreeTd} cardTitle={'Pista Premium'} cardText={'Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área.'} />
+                    <InfoCard cardImg={sectorMapThree} cardImgBig={sectorMapOneTd} cardTitle={'Cadeiras'} cardText={'Opção de cadeiras térreas ou elevadas. Acesso próximo a banheiros e bares, visão um pouco elevada em relação às pistas.'} />
                 </div>
             </div>
 

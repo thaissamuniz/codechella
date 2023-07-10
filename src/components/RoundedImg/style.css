@@ -1,0 +1,18 @@
+.rounded__mob {
+    display: block;
+}
+
+.rounded__desk {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .rounded__mob {
+        display: none;
+    }
+
+    .rounded__desk {
+        display: block;
+    }
+
+}
