@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 32px 23px; */
 }
 .main__info {
   display: flex;
@@ -20,10 +19,16 @@
     font-size: 20px;
     line-height: 40px;
     text-align: center;
+    max-width: 800px;
+   
 }
 
 .main__info--textbox {
     margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .main__btn {
@@ -35,8 +40,8 @@
     font-family: 'Calistoga', serif;
     font-size: 48px;
     text-align: center;
-    margin-top: 64px;
-    margin-bottom: 80px;
+    margin-top: 53px;
+    margin-bottom: 53px;
 }
 
 @media screen and (min-width: 768px) {

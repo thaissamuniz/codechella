@@ -1,6 +1,7 @@
 * {
     margin: 0;
 }
+
 .ticket {
     background: linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
@@ -12,6 +13,7 @@
     font-size: 20px;
     line-height: 40px;
     font-weight: 500;
+    max-width: 360px
 }
 
 .ticket__header {
@@ -31,17 +33,21 @@
 }
 
 @media screen and (min-width: 768px) {
+    .ticket {
+        max-width: 640px;
+    }
+
     .ticket__qr img {
         width: 378px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    /* .ticket {
-        margin-bottom: 64px;
-    } */
+    .ticket {
+        min-width: 975px;
+    }
     .ticket__content {
-       display: flex;
+        display: flex;
     }
 
     .ticket__info {

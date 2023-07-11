@@ -9,6 +9,8 @@ import hpimage from '../../img/Homepage1.png';
 import ImageDn from '../../components/ImageDn';
 import hpImageTablet from '../../img/Hm-tablet.png';
 
+import dnImage from '../../img/Homepage2.png';
+import dnImageDesk from '../../img/ImagemRodapeDesk.png'
 
 const MainContent = () => {
     return (
@@ -30,7 +32,8 @@ const MainContent = () => {
                 <DateStripe textContent={'DOMINGO <12/03>'} />
                 <AttractionList />
             </div>
-            <ImageDn />
+            {/* <RoundedImg img={dnImage} className={'rounded__mob'} />
+            <RoundedImg img={dnImageDesk} className={'rounded__desk'} /> */}
         </main>
     )
 }
